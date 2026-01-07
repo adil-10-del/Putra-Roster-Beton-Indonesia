@@ -122,6 +122,10 @@ body {
   font-weight: 600;
   border-radius: 10px;
 }
+.product-btn {
+  width: 100%;
+  margin-top: auto;
+}
 
 /* ===============================
    CTA SECTION
