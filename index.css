@@ -230,3 +230,57 @@ body {
   font-size: .95rem;
   color: #333;
 }
+/* ===============================
+   FORM KERJA SAMA
+================================ */
+
+/* Card form */
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+}
+
+/* Judul form */
+.card h3 {
+  font-weight: 600;
+}
+
+/* Label */
+.form-label {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* Input & textarea */
+.form-control,
+.form-select {
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border: 1px solid #ddd;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #b30000;
+  box-shadow: 0 0 0 0.2rem rgba(179, 0, 0, 0.15);
+}
+
+/* Tombol submit */
+#kerjasamaForm button {
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 14px;
+}
+
+/* Section header */
+.section.bg-dark h1 {
+  font-weight: 700;
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 30px 20px;
+  }
+}
