@@ -101,13 +101,12 @@ body {
 }
 
 /* CTA KHUSUS DALAM GRID */
-.product-cta {
-  border: 2px dashed rgba(255, 255, 255, 0.4);
-  text-align: center;
-}
-
-.product-cta h4 {
-  font-size: 1.4rem;
+.product-btn {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  font-weight: 600;
+  border-radius: 10px;
 }
 
 /* ===============================
