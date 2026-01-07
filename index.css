@@ -100,6 +100,14 @@ body {
   width: 100%;
 }
 .logo {
-  height: 20px;
+  height: 32px;   /* ukuran ideal desktop */
   width: auto;
 }
+
+/* Mobile */
+@media (max-width: 576px) {
+  .logo {
+    height: 26px;
+  }
+}
+
