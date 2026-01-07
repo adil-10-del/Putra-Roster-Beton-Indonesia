@@ -2,97 +2,100 @@ body {
   font-family: "Poppins", sans-serif;
   padding-top: 70px;
 }
-.hero-slider {
+
+/* HERO */
+.hero {
   position: relative;
   height: 90vh;
   overflow: hidden;
+  color: #fff;
 }
 
-.slide {
+.hero-slider .slide {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 1.2s ease-in-out;
-  transform: scale(1.05);
+  transition: opacity 1s ease;
 }
 
-.slide.active {
+.hero-slider .slide.active {
   opacity: 1;
-  transform: scale(1);
 }
 
-/* Overlay gelap */
-.hero-content {
+.hero::after {
+  content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    rgba(0,0,0,.55),
-    rgba(0,0,0,.65)
-  );
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+  position: relative;
   z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 900px;
+  margin: auto;
 }
 
-/* Animasi teks */
-.hero-content h1,
-.hero-content p,
-.hero-content .hero-btn {
-  animation: fadeUp 1s ease forwards;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.hero {
-  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
-              url("assets/img/hero/hero.jpg") center/cover no-repeat;
-  color: white;
-  padding: 120px 20px;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-}
-
+/* SECTION */
 .section {
-  padding: 80px 20px;
+  padding: 70px 0;
 }
 
+/* KEUNGGULAN */
+.feature-box {
+  padding: 30px;
+  border-radius: 12px;
+  background: #f8f9fa;
+  height: 100%;
+}
+
+/* PRODUK */
+.product-section {
+  background: linear-gradient(135deg, #2b2b2b, #111);
+}
+
+.product-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  height: 100%;
+  transition: transform .3s ease, background .3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.15);
+}
+
+/* CTA */
 .cta {
   background: #b30000;
-  color: white;
-  padding: 70px 20px;
+  color: #fff;
+  padding: 70px 0;
 }
 
-footer {
+/* FOOTER */
+.footer {
   background: #111;
   color: #ccc;
   padding: 20px 0;
 }
 
+/* WA FLOAT */
 .wa-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25d366;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
+  width: 55px;
+  z-index: 999;
+}
+
+.wa-float img {
+  width: 100%;
 }
