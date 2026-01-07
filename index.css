@@ -88,9 +88,10 @@ body {
 }
 
 /* Image box */
+/* Gambar Produk Proporsional */
 .product-img-box {
   width: 100%;
-  height: 200px;
+  aspect-ratio: 1 / 1; /* Menjaga gambar square */
   overflow: hidden;
   border-radius: 12px;
   margin-bottom: 15px;
@@ -99,7 +100,8 @@ body {
 .product-img-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Menjaga gambar mengisi proporsional */
+  object-position: center;
 }
 
 /* Text */
