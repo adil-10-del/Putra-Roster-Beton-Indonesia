@@ -209,3 +209,24 @@ body {
   color: #ccc;
   margin-bottom: 12px;
 }
+/* ===============================
+   LAYANAN | LIST
+================================ */
+.layanan-list .list-group-item {
+  border: none;
+  background: #f8f9fa;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+
+.layanan-list strong {
+  color: #b30000;
+  font-size: 1.15rem;
+}
+
+.layanan-list p {
+  margin-top: 6px;
+  font-size: .95rem;
+  color: #333;
+}
