@@ -2,7 +2,61 @@ body {
   font-family: "Poppins", sans-serif;
   padding-top: 70px;
 }
+.hero-slider {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
 
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  transform: scale(1.05);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Overlay gelap */
+.hero-content {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.65)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+/* Animasi teks */
+.hero-content h1,
+.hero-content p,
+.hero-content .hero-btn {
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .hero {
   background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
               url("assets/img/hero/hero.jpg") center/cover no-repeat;
