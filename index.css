@@ -174,3 +174,36 @@ body {
     height: 26px;
   }
 }
+/* ===============================
+   PRODUCT RATING & META
+================================ */
+
+/* Rating wrapper */
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .95rem;
+  margin-top: -6px;
+  margin-bottom: 4px;
+}
+
+/* Stars */
+.product-rating .stars {
+  color: #ffc107;
+  letter-spacing: 1px;
+}
+
+/* Numeric rating */
+.product-rating .rating-text {
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Reviews & sold */
+.product-meta {
+  display: block;
+  font-size: .85rem;
+  color: #ccc;
+  margin-bottom: 12px;
+}
