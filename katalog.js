@@ -1,23 +1,61 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const baseProducts = [
-    { name: "Roster Beton", img: "roster.jpg", desc: "Ventilasi beton estetik" },
-    { name: "Wallpanel Beton", img: "wallpanel.jpg", desc: "Panel beton dekoratif" },
-    { name: "Bata Ekspos", img: "bata.jpg", desc: "Tampilan natural industrial" },
-    { name: "Lisplang Beton", img: "lisplang.jpg", desc: "Finishing atap rapi" },
-    { name: "Paving Beton", img: "paving.jpg", desc: "Area parkir & halaman" }
-  ];
-
   const products = [];
 
-  for (let i = 0; i < 53; i++) {
-    const base = baseProducts[i % baseProducts.length];
-    products.push({
-      ...base,
-      name: `${base.name} Seri ${i + 1}`
-    });
+  function pushProducts(type, label, desc, total) {
+    for (let i = 1; i <= total; i++) {
+      products.push({
+        name: `${label} Seri ${i}`,
+        img: `${type}${i}.jpg`,
+        desc: desc
+      });
+    }
   }
 
+  // === DATA PRODUK ===
+  pushProducts(
+    "roster",
+    "Roster Beton",
+    "Ventilasi beton estetik dan kuat",
+    10
+  );
+
+  pushProducts(
+    "walpanel",
+    "Wallpanel Beton",
+    "Panel beton dekoratif modern",
+    10
+  );
+
+  pushProducts(
+    "bata",
+    "Bata Ekspos",
+    "Tampilan natural dan industrial",
+    8
+  );
+
+  pushProducts(
+    "genteng",
+    "Genteng Beton",
+    "Untuk atap rumah",
+    8
+  );
+
+  pushProducts(
+    "list",
+    "Lisplang Beton",
+    "Finishing atap rapi dan presisi",
+    10
+  );
+
+  pushProducts(
+    "paving",
+    "Paving Beton",
+    "Untuk halaman dan area parkir",
+    7
+  );
+
+  // === RENDER ===
   const list = document.getElementById("productList");
 
   products.forEach(p => {
@@ -62,4 +100,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
 
