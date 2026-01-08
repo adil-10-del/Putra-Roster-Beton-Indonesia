@@ -8,19 +8,14 @@ body {
 
 .logo {
   height: 32px;
+  width: auto;
 }
 
+/* Mobile logo */
 @media (max-width: 576px) {
   .logo {
     height: 26px;
   }
-}
-
-/* ==================================================
-   SECTION
-================================================== */
-.section {
-  padding: 70px 0;
 }
 
 /* ==================================================
@@ -63,6 +58,13 @@ body {
 }
 
 /* ==================================================
+   SECTION
+================================================== */
+.section {
+  padding: 70px 0;
+}
+
+/* ==================================================
    KEUNGGULAN
 ================================================== */
 .feature-box {
@@ -73,31 +75,33 @@ body {
 }
 
 /* ==================================================
-   PRODUCT
+   PRODUCT SECTION
 ================================================== */
 .product-section {
   background: linear-gradient(135deg, #2b2b2b, #111);
 }
 
 .product-card {
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   padding: 20px;
   color: #fff;
   height: 100%;
   display: flex;
   flex-direction: column;
-  transition: .3s;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .product-card:hover {
   transform: translateY(-6px);
-  background: rgba(255,255,255,.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
+/* Image */
 .product-img-box {
-  aspect-ratio: 1/1;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 12px;
   margin-bottom: 15px;
@@ -107,23 +111,27 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
+/* Text */
 .product-card h4 {
   font-size: 1.2rem;
+  margin-bottom: 6px;
 }
 
 .product-card p {
-  font-size: .95rem;
-  opacity: .9;
+  font-size: 0.95rem;
+  opacity: 0.9;
   margin-bottom: 12px;
 }
 
 /* Rating */
 .product-rating {
   display: flex;
+  align-items: center;
   gap: 6px;
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin-bottom: 4px;
 }
 
@@ -131,107 +139,22 @@ body {
   color: #ffc107;
 }
 
+.product-rating .rating-text {
+  font-weight: 600;
+}
+
 .product-meta {
-  font-size: .85rem;
+  font-size: 0.85rem;
   color: #ccc;
   margin-bottom: 12px;
 }
 
+/* Button */
 .product-btn {
+  width: 100%;
   margin-top: auto;
-  width: 100%;
-  border-radius: 10px;
   font-weight: 600;
-}
-
-/* ==================================================
-   LAYANAN
-================================================== */
-.layanan-list .list-group-item {
-  background: #f8f9fa;
-  border: none;
-  border-radius: 8px;
-  padding: 18px 20px;
-  margin-bottom: 10px;
-}
-
-.layanan-list strong {
-  color: #b30000;
-  font-size: 1.1rem;
-}
-
-.layanan-list p {
-  font-size: .95rem;
-  margin-top: 6px;
-}
-
-/* ==================================================
-   FORM KERJA SAMA (SCOPED)
-================================================== */
-.form-kerjasama .card {
-  background: #fff;
-  border-radius: 18px;
-}
-
-.form-kerjasama .form-label {
-  font-weight: 500;
-}
-
-.form-kerjasama .form-control,
-.form-kerjasama .form-select {
   border-radius: 10px;
-  padding: 12px 14px;
-  font-size: .95rem;
-}
-
-.form-kerjasama .form-control:focus,
-.form-kerjasama .form-select:focus {
-  border-color: #b30000;
-  box-shadow: 0 0 0 .2rem rgba(179,0,0,.15);
-}
-
-.form-kerjasama button {
-  border-radius: 12px;
-  font-weight: 600;
-  padding: 14px;
-}
-
-/* ==================================================
-   ARTICLE
-================================================== */
-.search-box {
-  max-width: 500px;
-  margin: auto;
-}
-
-.search-box input {
-  width: 100%;
-  padding: 14px 18px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-}
-
-.article-card {
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid #eee;
-  transition: .3s;
-  height: 100%;
-}
-
-.article-card:hover {
-  transform: translateY(-6px);
-}
-
-.article-card img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.article-card .content {
-  padding: 20px;
 }
 
 /* ==================================================
@@ -241,6 +164,72 @@ body {
   background: #b30000;
   color: #fff;
   padding: 70px 0;
+}
+
+/* ==================================================
+   LAYANAN
+================================================== */
+.layanan-list .list-group-item {
+  border: none;
+  background: #f8f9fa;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+
+.layanan-list strong {
+  color: #b30000;
+  font-size: 1.1rem;
+}
+
+.layanan-list p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* ==================================================
+   FORM KERJA SAMA (SCOPE KHUSUS)
+================================================== */
+.form-kerjasama .card {
+  background: #fff;
+  border-radius: 18px;
+}
+
+.form-kerjasama .card h3 {
+  font-weight: 600;
+}
+
+.form-kerjasama .form-label {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.form-kerjasama .form-control,
+.form-kerjasama .form-select {
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border: 1px solid #ddd;
+}
+
+.form-kerjasama .form-control:focus,
+.form-kerjasama .form-select:focus {
+  border-color: #b30000;
+  box-shadow: 0 0 0 0.2rem rgba(179, 0, 0, 0.15);
+}
+
+.form-kerjasama button {
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-kerjasama .card-body {
+    padding: 30px 20px;
+  }
 }
 
 /* ==================================================
@@ -266,3 +255,4 @@ body {
 .wa-float img {
   width: 100%;
 }
+
