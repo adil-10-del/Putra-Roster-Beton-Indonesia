@@ -1,14 +1,31 @@
-/* ===============================
+/* ==================================================
    GLOBAL
-================================ */
+================================================== */
 body {
   font-family: "Poppins", sans-serif;
   padding-top: 70px;
 }
 
-/* ===============================
+.logo {
+  height: 32px;
+}
+
+@media (max-width: 576px) {
+  .logo {
+    height: 26px;
+  }
+}
+
+/* ==================================================
+   SECTION
+================================================== */
+.section {
+  padding: 70px 0;
+}
+
+/* ==================================================
    HERO
-================================ */
+================================================== */
 .hero {
   position: relative;
   height: 90vh;
@@ -45,16 +62,9 @@ body {
   margin: auto;
 }
 
-/* ===============================
-   SECTION
-================================ */
-.section {
-  padding: 70px 0;
-}
-
-/* ===============================
+/* ==================================================
    KEUNGGULAN
-================================ */
+================================================== */
 .feature-box {
   padding: 30px;
   border-radius: 12px;
@@ -62,36 +72,32 @@ body {
   height: 100%;
 }
 
-/* =========================
-   PRODUCT SECTION
-========================= */
+/* ==================================================
+   PRODUCT
+================================================== */
 .product-section {
   background: linear-gradient(135deg, #2b2b2b, #111);
 }
 
-/* Card */
 .product-card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
   border-radius: 16px;
   padding: 20px;
   color: #fff;
   height: 100%;
   display: flex;
   flex-direction: column;
-  transition: transform .3s ease, background .3s ease;
+  transition: .3s;
 }
 
 .product-card:hover {
   transform: translateY(-6px);
-  background: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,.15);
 }
 
-/* Image box */
-/* Gambar Produk Proporsional */
 .product-img-box {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* Menjaga gambar square */
+  aspect-ratio: 1/1;
   overflow: hidden;
   border-radius: 12px;
   margin-bottom: 15px;
@@ -100,192 +106,99 @@ body {
 .product-img-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Menjaga gambar mengisi proporsional */
-  object-position: center;
+  object-fit: cover;
 }
 
-/* Text */
 .product-card h4 {
   font-size: 1.2rem;
-  margin-bottom: 6px;
 }
 
 .product-card p {
   font-size: .95rem;
   opacity: .9;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
-/* CTA KHUSUS DALAM GRID */
-.product-btn {
-  display: block;
-  width: 100%;
-  margin-top: 15px;
-  font-weight: 600;
-  border-radius: 10px;
-}
-.product-btn {
-  width: 100%;
-  margin-top: auto;
-}
-
-/* ===============================
-   CTA SECTION
-================================ */
-.cta {
-  background: #b30000;
-  color: #fff;
-  padding: 70px 0;
-}
-
-/* ===============================
-   FOOTER
-================================ */
-.footer {
-  background: #111;
-  color: #ccc;
-  padding: 20px 0;
-}
-
-/* ===============================
-   WHATSAPP FLOATING
-================================ */
-.wa-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 55px;
-  z-index: 999;
-}
-
-.wa-float img {
-  width: 100%;
-}
-
-/* ===============================
-   LOGO NAVBAR
-================================ */
-.logo {
-  height: 32px;
-  width: auto;
-}
-
-/* Mobile */
-@media (max-width: 576px) {
-  .logo {
-    height: 26px;
-  }
-}
-/* ===============================
-   PRODUCT RATING & META
-================================ */
-
-/* Rating wrapper */
+/* Rating */
 .product-rating {
   display: flex;
-  align-items: center;
   gap: 6px;
-  font-size: .95rem;
-  margin-top: -6px;
+  font-size: .9rem;
   margin-bottom: 4px;
 }
 
-/* Stars */
 .product-rating .stars {
   color: #ffc107;
-  letter-spacing: 1px;
 }
 
-/* Numeric rating */
-.product-rating .rating-text {
-  font-weight: 600;
-  color: #fff;
-}
-
-/* Reviews & sold */
 .product-meta {
-  display: block;
   font-size: .85rem;
   color: #ccc;
   margin-bottom: 12px;
 }
-/* ===============================
-   LAYANAN | LIST
-================================ */
+
+.product-btn {
+  margin-top: auto;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* ==================================================
+   LAYANAN
+================================================== */
 .layanan-list .list-group-item {
-  border: none;
   background: #f8f9fa;
-  margin-bottom: 8px;
+  border: none;
   border-radius: 8px;
   padding: 18px 20px;
+  margin-bottom: 10px;
 }
 
 .layanan-list strong {
   color: #b30000;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 
 .layanan-list p {
-  margin-top: 6px;
   font-size: .95rem;
-  color: #333;
+  margin-top: 6px;
 }
-/* ===============================
-   FORM KERJA SAMA
-================================ */
 
-/* Card form */
-.card {
-  background: #ffffff;
+/* ==================================================
+   FORM KERJA SAMA (SCOPED)
+================================================== */
+.form-kerjasama .card {
+  background: #fff;
   border-radius: 18px;
 }
 
-/* Judul form */
-.card h3 {
-  font-weight: 600;
-}
-
-/* Label */
-.form-label {
+.form-kerjasama .form-label {
   font-weight: 500;
-  margin-bottom: 6px;
 }
 
-/* Input & textarea */
-.form-control,
-.form-select {
+.form-kerjasama .form-control,
+.form-kerjasama .form-select {
   border-radius: 10px;
   padding: 12px 14px;
-  font-size: 0.95rem;
-  border: 1px solid #ddd;
+  font-size: .95rem;
 }
 
-.form-control:focus,
-.form-select:focus {
+.form-kerjasama .form-control:focus,
+.form-kerjasama .form-select:focus {
   border-color: #b30000;
-  box-shadow: 0 0 0 0.2rem rgba(179, 0, 0, 0.15);
+  box-shadow: 0 0 0 .2rem rgba(179,0,0,.15);
 }
 
-/* Tombol submit */
-#kerjasamaForm button {
+.form-kerjasama button {
   border-radius: 12px;
   font-weight: 600;
   padding: 14px;
 }
 
-/* Section header */
-.section.bg-dark h1 {
-  font-weight: 700;
-}
-
-/* Responsive spacing */
-@media (max-width: 768px) {
-  .card-body {
-    padding: 30px 20px;
-  }
-}
-
-/* SEARCH */
+/* ==================================================
+   ARTICLE
+================================================== */
 .search-box {
   max-width: 500px;
   margin: auto;
@@ -296,16 +209,14 @@ body {
   padding: 14px 18px;
   border-radius: 12px;
   border: 1px solid #ddd;
-  font-size: 1rem;
 }
 
-/* ARTICLE */
 .article-card {
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid #eee;
-  transition: transform .3s ease;
+  transition: .3s;
   height: 100%;
 }
 
@@ -314,8 +225,8 @@ body {
 }
 
 .article-card img {
-  width: 100%;
   height: 200px;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -323,12 +234,35 @@ body {
   padding: 20px;
 }
 
-.article-card h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
+/* ==================================================
+   CTA
+================================================== */
+.cta {
+  background: #b30000;
+  color: #fff;
+  padding: 70px 0;
 }
 
-.article-card p {
-  font-size: .95rem;
-  color: #555;
+/* ==================================================
+   FOOTER
+================================================== */
+.footer {
+  background: #111;
+  color: #ccc;
+  padding: 20px 0;
+}
+
+/* ==================================================
+   WHATSAPP FLOAT
+================================================== */
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  z-index: 999;
+}
+
+.wa-float img {
+  width: 100%;
 }
