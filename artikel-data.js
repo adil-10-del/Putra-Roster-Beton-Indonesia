@@ -31,3 +31,17 @@ const articles = [
     `
   }
 ];
+let imageManifest = {};
+
+fetch("assets/images/artikel/images.json")
+  .then(res => res.json())
+  .then(data => imageManifest = data);
+
+function randomImage(category) {
+  const list = imageManifest[category];
+  if (!list || list.length === 0) {
+    return "assets/images/artikel/default.jpg";
+  }
+  const rand = Math.floor(Math.random() * list.length);
+  return `assets/images/artikel/${list[rand]}`;
+}
