@@ -2,11 +2,14 @@ const list = document.getElementById("articleList");
 
 function renderArticles(data) {
   list.innerHTML = "";
+
   data.forEach(a => {
+    const img = randomImage(a.category); // ⬅️ PENTING
+
     list.innerHTML += `
       <div class="col-md-4">
         <div class="article-card">
-          <img src="${a.image}">
+          <img src="${img}" alt="${a.title}">
           <div class="content">
             <h3>${a.title}</h3>
             <p>${a.excerpt}</p>
@@ -20,17 +23,9 @@ function renderArticles(data) {
     `;
   });
 }
-
-renderArticles(articles);
-
-// SEARCH
-document.querySelector(".search-box input").addEventListener("input", e => {
-  const q = e.target.value.toLowerCase();
-  renderArticles(
-    articles.filter(a =>
-      a.title.toLowerCase().includes(q) ||
-      a.excerpt.toLowerCase().includes(q)
-    )
-  );
-});
-
+fetch("assets/images/artikel/images.json")
+  .then(res => res.json())
+  .then(data => {
+    imageManifest = data;
+    renderArticles(articles); // ⬅️ render SETELAH data siap
+  });
