@@ -27,5 +27,4 @@ fetch("assets/images/artikel/images.json")
   .then(res => res.json())
   .then(data => {
     imageManifest = data;
-    renderArticles(articles); // ⬅️ render SETELAH data siap
   });
