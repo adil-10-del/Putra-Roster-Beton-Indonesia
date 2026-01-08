@@ -284,27 +284,6 @@ body {
     padding: 30px 20px;
   }
 }
-/* GLOBAL */
-body {
-  font-family: "Poppins", sans-serif;
-  padding-top: 70px;
-}
-
-/* LOGO */
-.logo {
-  height: 32px;
-}
-
-/* HEADER */
-.page-header {
-  background: linear-gradient(135deg, #1c1c1c, #000);
-  color: #fff;
-  padding: 80px 0 60px;
-}
-
-.page-header h1 {
-  font-weight: 700;
-}
 
 /* SEARCH */
 .search-box {
@@ -352,12 +331,4 @@ body {
 .article-card p {
   font-size: .95rem;
   color: #555;
-}
-
-/* FOOTER */
-.footer {
-  background: #111;
-  color: #ccc;
-  padding: 20px 0;
-  margin-top: 60px;
 }
