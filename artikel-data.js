@@ -3,10 +3,6 @@
 // =============================
 let imageManifest = {};
 
-fetch("assets/images/artikel/images.json")
-  .then(res => res.json())
-  .then(data => imageManifest = data);
-
 // Random image by category
 function randomImage(category) {
   const list = imageManifest[category];
@@ -34,5 +30,4 @@ const articles = [
       <p>Udara tetap mengalir tanpa mengorbankan privasi.</p>
     `
   }
-  // tambah artikel di sini
 ];
