@@ -1,10 +1,30 @@
 const list = document.getElementById("articleList");
 
+// =============================
+// LOAD IMAGE MANIFEST
+// =============================
+fetch("assets/images/artikel/images.json")
+  .then(res => {
+    if (!res.ok) throw new Error("images.json tidak ditemukan");
+    return res.json();
+  })
+  .then(data => {
+    imageManifest = data;
+    renderArticles(articles); // ⬅️ WAJIB DI SINI
+  })
+  .catch(err => {
+    console.error("Gagal load images.json:", err);
+    renderArticles(articles); // fallback tanpa gambar
+  });
+
+// =============================
+// RENDER ARTICLES
+// =============================
 function renderArticles(data) {
   list.innerHTML = "";
 
   data.forEach(a => {
-    const img = randomImage(a.category); // ⬅️ PENTING
+    const img = randomImage(a.category);
 
     list.innerHTML += `
       <div class="col-md-4">
@@ -23,8 +43,18 @@ function renderArticles(data) {
     `;
   });
 }
-fetch("assets/images/artikel/images.json")
-  .then(res => res.json())
-  .then(data => {
-    imageManifest = data;
+
+// =============================
+// SEARCH
+// =============================
+document.querySelector(".search-box input")
+  ?.addEventListener("input", e => {
+    const q = e.target.value.toLowerCase();
+    renderArticles(
+      articles.filter(a =>
+        a.title.toLowerCase().includes(q) ||
+        a.excerpt.toLowerCase().includes(q)
+      )
+    );
   });
+
