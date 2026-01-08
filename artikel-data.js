@@ -36,4 +36,3 @@ const articles = [
   }
   // tambah artikel di sini
 ];
-
