@@ -1,29 +1,9 @@
 {
-  "roster": [
-    "roster1.jpg",
-    "roster3.jpg",
-    "roster7.jpg",
-    "roster10.jpg"
-  ],
-  "wallpanel": [
-    "wallpanel.jpg",
-    "wallpane5.jpg",
-    "wallpane9.jpg"
-  ],
-  "bata": [
-    "bata1.jpg",
-    "bata4.jpg"
-  ],
-  "genteng": [
-    "genteng3.jpg",
-    "genteng6.jpg"
-  ],
-  "lisplang": [
-    "list1.jpg",
-    "list8.jpg"
-  ],
-  "paving": [
-    "paving2.jpg",
-    "paving5.jpg"
-  ]
+  "roster": ["roster1.jpg", "roster3.jpg", "roster7.jpg"],
+  "wallpanel": ["wallpanel2.jpg", "wallpanel9.jpg"],
+  "bata": ["bata1.jpg", "bata5.jpg"],
+  "genteng": ["genteng3.jpg", "genteng5.jpg"],
+  "lisplang": ["list4.jpg", "list8.jpg"],
+  "paving": ["paving6.jpg", "paving3.jpg"]
 }
+
