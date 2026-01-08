@@ -121,3 +121,33 @@ body {
 .wa-float img {
   width: 100%;
 }
+.article-detail-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.article-detail-card h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.article-meta {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.article-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #eee;
+  margin-bottom: 16px;
+}
+
+.article-content h2 {
+  font-size: 1.3rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #fff;
+}
