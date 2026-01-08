@@ -60,9 +60,16 @@ body {
 }
 
 /* Image box (konsisten dengan product) */
-.article-card img {
+.article-img-box {
   width: 100%;
   aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.article-img-box img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
