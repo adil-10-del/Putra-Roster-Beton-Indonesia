@@ -38,19 +38,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const img = randomImage(a.category);
 
       list.innerHTML += `
-        <div class="col-md-4">
-          <div class="article-card">
-            <img src="${img}" alt="${a.title}">
-            <div class="content">
-              <h3>${a.title}</h3>
-              <p>${a.excerpt}</p>
-              <a href="artikel-detail.html?slug=${a.slug}"
-                 class="btn btn-danger btn-sm">
-                Baca Selengkapnya
-              </a>
-            </div>
-          </div>
-        </div>
+      <div class="article-card">
+  <div class="article-img-box">
+    <img src="${img}" alt="${a.title}">
+  </div>
+
+  <div class="content">
+    <h3>${a.title}</h3>
+    <p>${a.excerpt}</p>
+    <a href="artikel-detail.html?slug=${a.slug}"
+       class="btn btn-danger btn-sm">
+      Baca Selengkapnya
+    </a>
+  </div>
+</div>
       `;
     });
   }
