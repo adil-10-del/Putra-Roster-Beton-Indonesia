@@ -75,3 +75,17 @@ body {
   padding: 20px 0;
   margin-top: 60px;
 }
+/* ==================================================
+   WHATSAPP FLOAT
+================================================== */
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  z-index: 999;
+}
+
+.wa-float img {
+  width: 100%;
+}
