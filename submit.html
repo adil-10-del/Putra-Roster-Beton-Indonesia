@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Submit Artikel | Putra Roster Beton Indonesia</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/blog.css">
+</head>
+
+<body>
+
+<header class="header-small">
+  <div class="navbar">
+    <img src="../assets/images/logo.jpg" class="logo">
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../blog.html">Blog</a>
+      <a class="active">Submit Artikel</a>
+    </nav>
+  </div>
+
+  <div class="hero-text">
+    <h1>Submit Artikel</h1>
+    <p>Tulis & generate artikel secara otomatis</p>
+  </div>
+</header>
+
+<section class="form-section">
+  <form id="submitForm">
+
+    <label>Judul Artikel</label>
+    <input type="text" id="title" required>
+
+    <label>Kategori</label>
+    <select id="category">
+      <option>Roster Beton</option>
+      <option>Paving</option>
+      <option>Genteng</option>
+      <option>Bata</option>
+      <option>Wallpanel</option>
+      <option>List Pang</option>
+    </select>
+
+    <label>Ringkasan Artikel</label>
+    <textarea id="excerpt" rows="2" required></textarea>
+
+    <label>Isi Artikel</label>
+    <textarea id="content" rows="6" required></textarea>
+
+    <label>Upload Gambar Utama</label>
+    <input type="file" id="image" accept="image/*" required>
+
+    <button type="submit" class="btn">
+      Generate Artikel HTML
+    </button>
+
+  </form>
+</section>
+
+<script src="submit.js"></script>
+</body>
+</html>
