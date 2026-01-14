@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 70px;
+  background: #f8f9fa;
+}
+
+.logo {
+  height: 40px;
+}
+
+.page-header {
+  background: #111;
+  color: #fff;
+  padding: 70px 0 50px;
+}
+
+.page-header h1 {
+  font-weight: bold;
+}
+
+.kontak-section {
+  padding: 60px 0;
+}
+
+.info-box,
+.form-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.info-box h4,
+.form-box h4 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.info-box a {
+  color: #dc3545;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form-box label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-box input,
+.form-box textarea,
+.form-box select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.btn-submit {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn-submit:hover {
+  background: #b02a37;
+}
+
+.footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.wa-float img {
+  width: 55px;
+}
