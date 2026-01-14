@@ -1,0 +1,105 @@
+/* ===============================
+   SUBMIT ARTIKEL
+================================ */
+
+.form-section {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-section label {
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+}
+
+.form-section input,
+.form-section textarea,
+.form-section select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  outline: none;
+  transition: .25s;
+}
+
+.form-section input:focus,
+.form-section textarea:focus,
+.form-section select:focus {
+  border-color: #c9a23f;
+  box-shadow: 0 0 0 2px rgba(201,162,63,.2);
+}
+
+.form-section textarea {
+  resize: vertical;
+}
+
+/* BUTTON */
+.form-section .btn {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #c9a23f, #b88c2a);
+  color: #fff;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.form-section .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.15);
+}
+
+/* ===============================
+   SUBMIT HEADER (SAMA BLOG)
+================================ */
+
+.header-small {
+  background: #111;
+  padding-bottom: 40px;
+}
+
+.hero-text {
+  text-align: center;
+  padding: 60px 20px 0;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.hero-text p {
+  opacity: .85;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .form-section {
+    margin: 40px 15px;
+    padding: 22px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+}
