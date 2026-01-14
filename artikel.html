@@ -55,6 +55,47 @@
     <form class="search-box mb-5" method="get">
       <input type="text" id="searchInput" placeholder="Cari artikel...">
     </form>
+    <section class="submit-article mb-5">
+  <h2 class="mb-3">Submit Artikel</h2>
+
+  <form id="submitForm" class="row g-3">
+    <div class="col-md-6">
+      <label class="form-label">Judul Artikel</label>
+      <input type="text" id="title" class="form-control" required>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Kategori</label>
+      <select id="category" class="form-select">
+        <option>Roster Beton</option>
+        <option>Paving</option>
+        <option>Genteng</option>
+        <option>Bata</option>
+        <option>Wallpanel</option>
+      </select>
+    </div>
+
+    <div class="col-12">
+      <label class="form-label">Ringkasan</label>
+      <textarea id="excerpt" class="form-control" rows="2" required></textarea>
+    </div>
+
+    <div class="col-12">
+      <label class="form-label">Isi Artikel</label>
+      <textarea id="content" class="form-control" rows="6" required></textarea>
+    </div>
+
+    <div class="col-12">
+      <label class="form-label">Upload Gambar</label>
+      <input type="file" id="image" class="form-control" accept="image/*" required>
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-danger">
+        Generate Artikel HTML
+      </button>
+    </div>
+  </form>
 
     <div class="row g-4" id="articleList"></div>
 
@@ -98,5 +139,60 @@ fetch("data/blog.json")
     `).join("");
   });
 </script>
+  <script>
+document.getElementById("submitForm").addEventListener("submit", e => {
+  e.preventDefault();
+
+  const reader = new FileReader();
+  const file = image.files[0];
+
+  reader.onload = () => {
+    const slug = title.value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+    const html = `
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>${title.value} | Putra Roster Beton Indonesia</title>
+<meta name="description" content="${excerpt.value}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="../artikel.css">
+</head>
+<body>
+
+<section class="page-header">
+  <div class="container text-center">
+    <h1>${title.value}</h1>
+    <p>${category.value}</p>
+  </div>
+</section>
+
+<section class="article-section">
+  <div class="container">
+    <img src="${reader.result}" style="width:100%;border-radius:16px;margin-bottom:20px">
+    <p>${content.value.replace(/\n/g, "<br>")}</p>
+    <a href="../artikel.html">← Kembali ke Artikel</a>
+  </div>
+</section>
+
+</body>
+</html>
+`;
+
+    const blob = new Blob([html], { type: "text/html" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = slug + ".html";
+    a.click();
+
+    alert("Artikel HTML berhasil digenerate!\nUpload ke folder /blog/");
+  };
+
+  reader.readAsDataURL(file);
+});
+</script>
+
 </body>
 </html>
