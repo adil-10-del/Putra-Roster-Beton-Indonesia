@@ -55,47 +55,11 @@
     <form class="search-box mb-5" method="get">
       <input type="text" id="searchInput" placeholder="Cari artikel...">
     </form>
-    <section class="submit-article mb-5">
-  <h2 class="mb-3">Submit Artikel</h2>
-
-  <form id="submitForm" class="row g-3">
-    <div class="col-md-6">
-      <label class="form-label">Judul Artikel</label>
-      <input type="text" id="title" class="form-control" required>
-    </div>
-
-    <div class="col-md-6">
-      <label class="form-label">Kategori</label>
-      <select id="category" class="form-select">
-        <option>Roster Beton</option>
-        <option>Paving</option>
-        <option>Genteng</option>
-        <option>Bata</option>
-        <option>Wallpanel</option>
-      </select>
-    </div>
-
-    <div class="col-12">
-      <label class="form-label">Ringkasan</label>
-      <textarea id="excerpt" class="form-control" rows="2" required></textarea>
-    </div>
-
-    <div class="col-12">
-      <label class="form-label">Isi Artikel</label>
-      <textarea id="content" class="form-control" rows="6" required></textarea>
-    </div>
-
-    <div class="col-12">
-      <label class="form-label">Upload Gambar</label>
-      <input type="file" id="image" class="form-control" accept="image/*" required>
-    </div>
-
-    <div class="col-12">
-      <button class="btn btn-danger">
-        Generate Artikel HTML
-      </button>
-    </div>
-  </form>
+  <div class="blog-submit">
+    <a href="blog/submit.html" class="btn btn-outline">
+      ✍️ Submit Artikel
+    </a>
+  </div>
 
     <div class="row g-4" id="articleList"></div>
 
