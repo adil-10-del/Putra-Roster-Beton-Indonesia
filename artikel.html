@@ -70,5 +70,33 @@
 </a>
 <script src="artikel-data.js"></script>
 <script src="artikel.js"></script>
+  <script>
+fetch("data/blog.json")
+  .then(res => res.json())
+  .then(data => {
+    const list = document.getElementById("articleList");
+    if (!list) return;
+
+    list.innerHTML = data.posts.map(p => `
+      <article class="blog-card">
+        <img src="${p.image}" alt="${p.title}">
+        <div class="blog-card-body">
+          <div class="blog-meta">
+            📅 ${p.date} • 🏷️ ${p.category}
+          </div>
+          <h3>
+            <a href="blog/${p.slug}.html">${p.title}</a>
+          </h3>
+          <p class="blog-excerpt">
+            ${p.excerpt || "Artikel seputar material bangunan dan tips konstruksi."}
+          </p>
+          <a href="blog/${p.slug}.html" class="blog-readmore">
+            Baca selengkapnya →
+          </a>
+        </div>
+      </article>
+    `).join("");
+  });
+</script>
 </body>
 </html>
